@@ -38,11 +38,42 @@ main(){
 	printf("Este es un switch\n");
 	switch(a2){
 		case 1:
-			printf("La opcion que selecciono es 1.\n");
+			printf("La opcion que selecciono es 1.\n\n");
 		break;
 		case 2: 
-			printf("La opcion que selecciono es 2.\n");
+			printf("La opcion que selecciono es 2.\n\n");
 		break;
-		default:printf("La opcion selecionada no esta disponible.\n");
+		default:printf("La opcion selecionada no esta disponible.\n\n");
 	}
+
+	//La siguiente seccion de codigo realiza la divicion por definicion de un numero A dado entre un B
+	int a3,r3,i3,n3,b3;
+
+        printf("Introduce el dividendo A\n");
+	scanf("%d",&a3);
+        printf("Introduce  tu divisor B\n");
+	scanf("%d",&b3);
+
+
+	r3=a3;
+	n3=0;
+	while(r3>=b3){
+        	r3=r3-b3;
+	        n3=n3+1;
+	}
+	printf("La division de %d / %d es : %d + un residuo de %d\n\n",a3,b3,n3,r3);
+
+	//En la lineas siguientes se muestra como hacer el factorial con un ciclo for
+	printf("Introduce  A\n");
+	scanf("%d",&a3);
+
+	r3=1;
+	n3=a3;
+	for(i3=n3; i3>=1; i3--){
+        	r3=n3*r3;
+        	n3=n3-1;
+	}
+
+	printf("El factorial de %d es : %d\n\n",a3,r3);
+ 
 }
