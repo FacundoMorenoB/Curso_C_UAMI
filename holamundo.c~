@@ -78,31 +78,29 @@ main(){
 
 	//En esta parte tengan cuidado porque si copian el codigo y lo pegan tal cual les provocara error
 	//devido a que hay dos instrucciones main pero lo pongo asi para ver ejemplos de funciones.
-		#include <stdio.h>
+	#include <stdio.h>
+	int resta(int,int);
 
-		int resta(int,int);
+	int suma(int x, int y){
+	int r;
+	r=y+x;
+	return(r);
+	}
 
-		int suma(int x, int y){
+	main(){
+		int x,y,r;
+		x=5;
+		y=10;
+		r=suma(x,y);
+		printf("El valor de la suma es:%d\n",r);
+		r=resta(y,x);
+		printf("El valor de la resta es:%d\n",r);
+	}
+
+	int resta (int x, int y){
 		int r;
-		r=y+x;
+		r=x-y;
 		return(r);
-		}
-
-		main(){
-			int x,y,r;
-			x=5;
-			y=10;
-			r=suma(x,y);
-			printf("El valor de la suma es:%d\n",r);
-			r=resta(y,x);
-			printf("El valor de la resta es:%d\n",r);
-		}
-
-
-		int resta (int x, int y){
-			int r;
-			r=x-y;
-			return(r);
-		}
+	}
  
 }

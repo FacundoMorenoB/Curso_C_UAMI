@@ -102,5 +102,69 @@ main(){
 		r=x-y;
 		return(r);
 	}
+
+	//Al igual que la parte anterior esta parte si copiamos el codigo tal cual mandara error
+	//pero lo coloco asi para ver un procesimiento.
+	#include <stdio.h>
+
+	//definimos una variable global llamada "Z" 
+	#define z 4
+	
+	//Prototipos necesarios para mandar a llamar los procedimientos dentro del codigo sin haber
+	//Declarado las funciones antes	
+	void llenado (int [z][z],int);
+	void imprime (int [z][z]);	
+	void suma (int [z][z],int[z][z],int[z][z]);
+	
+	int main(){
+		int A[z][z];
+		int a;
+		int B[z][z];
+		int C[z][z];
+		printf("Inserta de cuanto en cuano se va a llenar el arreglo:\n");
+		scanf("%d",&a);
+		llenado(A,a);
+		printf("Inserta de cuanto en cuano se va a llenar el arreglo:\n");
+        	scanf("%d",&a);
+        	llenado(B,a);	
+		suma(A,B,C);
+		printf("El resultado de sumar tus dos matrices es:\n");
+		imprime(C);
+		
+	return 0;
+	}
+	
+	//Funcion llenado para una matriz de 2X2 
+	void llenado(int A[z][z], int a){
+		int i,j;
+		
+		for(i=0; i<z; i++){
+			for(j=0; j<z; j++){
+				A[i][j]=a;
+				a=a+a;
+			}
+		}
+	}
+
+	void suma(int A[z][z], int B[z][z], int C[z][z]){
+        	int i,j;
+	
+        	for(i=0; i<z; i++){
+        	        for(j=0; j<z; j++){
+        	                C[i][j]=A[i][j]+B[i][j];
+        	        }
+        	}
+	}
+
+	void imprime(int C[z][z]){
+        	int i,j;
+
+        	for(i=0; i<z; i++){
+        	        for(j=0; j<z; j++){
+        	                printf("%d ",C[i][j]);
+        	        }
+			printf("\n");
+        	}
+	}
  
 }
